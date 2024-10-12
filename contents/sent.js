@@ -1,5 +1,4 @@
 function sent() {
-  const title = $('#title').val();
   const message = $('#message').val();
   const image = $('#image').val();
   if (title !== '' && message !== '' && image !== '') {
@@ -13,7 +12,6 @@ function sent() {
       second: currentDate.getSeconds()
     }
     const formData = {
-      title: title,
       message: message,
       photo: image,
       time: date.hour + ':' + date.minute + ':' + date.second,
