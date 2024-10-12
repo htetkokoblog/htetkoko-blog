@@ -1,4 +1,5 @@
 <!--- Persoanl Profile, Personal - Blog and About Me --->
+
 <!DOCTYPE html>
 <html ng-app="blog">
 
@@ -40,7 +41,7 @@
     <img class="w-32 h-32 rounded-full object-cover" src="images/profile.png" alt="Avatar">
     <div class="ml-4">
       <h1 class="text-2xl font-bold">Htet Ko Ko</h1></h1>
-      <p class="text-gray-600 text-sm" style="font-family: Nunito;">Junier Web Developer &lt;/&gt;</p>
+      <p class="text-gray-600" style="font-family: Nunito;">Junier Web Developer</p>
     </div>
   </div>
   <div class="flex justify-center items-center justify-evenly">
@@ -75,7 +76,7 @@
       {{ item.description }}
     </p>
   </div>
-  <div class="px-6 mb-2" ng-if="item.photo">
+  <div class="px-6 mb-2 max-w-md" ng-if="item.photo">
     <img ng-src="{{ item.photo}}" alt="cover" class="w-full h-1/2 me-5 rounded-lg">
   </div>
   <div class="px-6 py-4">
@@ -92,4 +93,4 @@
   <p class="text-gray-400 text-sm ps-4" style="font-family: Nunito;">Personal Profile, Personal - Blog and About Me.......</p>
 </div>
 </body>
-  </html>
+</html>
