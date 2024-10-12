@@ -54,11 +54,12 @@
       My name is Htet Ko Ko. I was born on November, 2006, in Sagaing Region, Myanmar. I am currently residing in Mandalay City. I have completed high school education and am currently working as a Customer Service representative and Junior Web Developer.
     </div>
   </div>
-  <div class="text-gray-700 text-xl text-start font-bold mb-4">
+  <div ng-repeat="item in data">
+  <div class="text-gray-700 text-xl text-start font-bold mb-4" ng-if="item.description">
     Personal - Blog
   </div>
 <!---Personal Blog--->
-<div class="w-full bg-white rounded-lg shadow-lg overflow-hidden mb-8" ng-repeat="item in data">
+<div class="w-full bg-white rounded-lg shadow-lg overflow-hidden mb-8" ng-if="item.description">
   <div class="flex items-center px-6 py-4">
     <img class="w-12 h-12 rounded-full object-cover" src="images/profile.png" alt="Avatar">
     <div class="ml-3">
@@ -83,6 +84,7 @@
       {{ item.time }}
     </div>
   </div>
+</div>
 </div>
 <div class="w-full flex justify-center items-center p-5 mb-10">
   <p class="text-gray-600 text-md">Copyright&copy; 2024</p>
