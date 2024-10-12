@@ -16,7 +16,8 @@ blog.controller('myblog', function($scope, $http) {
 
             const fileData = await response.json();
             const content = atob(fileData.content); // base64_decode
-            $scope.data = JSON.parse(content); // Set data to scope
+            const decoded = decodeURIComponent(escape(content));
+            $scope.data = JSON.parse(decoded);// Set data to scope
             $scope.data.reverse(); // Reverse the array if needed
             $scope.$apply(); // Notify AngularJS about the changes
         } catch (error) {
