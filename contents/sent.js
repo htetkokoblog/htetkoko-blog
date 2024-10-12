@@ -11,10 +11,15 @@ function sent() {
       minute: currentDate.getMinutes(),
       second: currentDate.getSeconds()
     }
+    // Convert to 12-hour format
+    let ampm = date.hour >= 12 ? 'PM' : 'AM';
+    let hour12 = date.hour % 12;
+    hour12 = hour12 ? hour12 : 12; // the hour '0' should be '12'
+
     const formData = {
       description: description,
       photo: image,
-      time: date.hour + ':' + date.minute + ':' + date.second,
+      time: hour12 + ':' + String(date.minute).padStart(2, '0') + ' ' + ampm,
       date: date.day + '-' + date.month + '-' + date.year
    }
   appendToJsonFile(formData);
