@@ -24,7 +24,7 @@
   <!---CND Link--->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
   <title>Htet Ko Ko - Blog</title>
   <!---Local File Add--->
   <link rel="stylesheet" href="/design/main.css">
@@ -58,7 +58,7 @@
     Personal - Blog
   </div>
 <!---Personal Blog--->
-<div class="w-full bg-white rounded-lg shadow-lg overflow-hidden mb-8" ng-repeat="item in data">
+<div class="w-full bg-white rounded-lg shadow-lg overflow-hidden mb-8" ng-repeat="item in data" >
   <div class="flex items-center px-6 py-4">
     <img class="w-12 h-12 rounded-full object-cover" src="images/profile.png" alt="Avatar">
     <div class="ml-3">
