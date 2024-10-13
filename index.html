@@ -53,10 +53,10 @@
     </div>
   </div>
   <!---Personal Blog--->
-  <div ng-repeat="item in data">
   <div class="text-gray-700 text-xl text-start font-bold mb-4" ng-if="item.description">
     Personal - Blog
   </div>
+   <div ng-repeat="item in data">
 <div class="w-full bg-white rounded-lg shadow-lg overflow-hidden mb-8" ng-attr-id="{{item.id}}">
   <div class="flex items-center px-6 py-4">
     <img class="w-12 h-12 rounded-full object-cover" src="images/profile.png" alt="Avatar">
