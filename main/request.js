@@ -1,6 +1,6 @@
 //Request Get Data
 const blog = angular.module('blog', []);
-blog.controller('myblog', function($scope, $http) {
+blog.controller('myblog', function($scope, $http, $location) {
     $scope.$on('$locationChangeSuccess', function() {
     const hash = $location.hash();
     const element = document.getElementById(hash);
