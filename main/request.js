@@ -11,7 +11,7 @@ blog.controller('myblog', function($scope, $http, $location) {
 });
 
     function getJsonFile() {
-        $http.get('postdata.json')
+        $http.get('main/postdata.json')
             .then(function(response) {
                 $scope.data = response.data;
                 $scope.data.reverse(); // Reverse the array if needed
