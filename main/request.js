@@ -1,14 +1,17 @@
 //Request Get Data
 const blog = angular.module('blog', []);
-blog.controller('myblog', function($scope, $http, $location) {
+blog.controller('myblog', function($scope, $http, $location, $sce) {
+    $scope.renderHtml = function(text) {
+        return $sce.trustAsHtml(text.replace(/\n/g, '<br>'));
+    };
     $scope.$on('$locationChangeSuccess', function() {
-    const hash = $location.hash();
-    const element = document.getElementById(hash);
+         const hash = $location.hash();
+         const element = document.getElementById(hash);
     
-    if (element) {
-        element.scrollIntoView();
-    }
-});
+         if (element) {
+              element.scrollIntoView();
+         }
+    });
 
     function getJsonFile() {
         $http.get('main/postdata.json')
