@@ -9,7 +9,6 @@
   <meta property="og:image" content="/images/profile.png">
   <meta property="og:url" content="https://htetkoko.vercel.app">
   <meta property="og:type" content="website">
-  <meta content="Htet Ko Ko - Blog" name="description">
   <meta content="Htet Ko Ko,Myanmar,Blog,Coding,Poem" name="keywords">
   <!---favicon add--->
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
@@ -32,15 +31,15 @@
 </head>
 
 <body class="bg-gray-100 px-3" ng-controller="myblog">
-  <div class="w-full bg-white rounded-lg shadow-md grid justify-center items-center p-4 mb-10 mt-3">
-    <div class="flex items-center px-6 py-4 mb-4">
-    <img class="w-32 h-32 rounded-full object-cover" src="images/profile.png" alt="Avatar">
-    <div class="ml-4">
-      <h1 class="text-2xl font-bold">Htet Ko Ko</h1></h1>
-      <p class="text-gray-600 text-sm" style="font-family: Nunito;">Junier Web Developer &lt;/&gt;</p>
+  <div class="w-full bg-white rounded-lg shadow-md gird justify-center items-center p-4 mb-10 mt-3">
+    <div class="flex md:flex-col items-center px-6 py-4 mb-4">
+    <img class="w-32 h-32 md:w-52 md:h-52 rounded-full object-cover flex-2 md:mb-3" src="images/profile.png" alt="Avatar">
+    <div class="ml-4 flex-2 md:text-center md:mb-1">
+      <h1 class="text-2xl font-bold md:text-4xl">Htet Ko Ko</h1></h1>
+      <p class="text-gray-600 text-sm md:text-lg md:mb-5" style="font-family: Nunito;">Junier Web Developer &lt;/&gt;</p>
     </div>
   </div>
-  <div class="flex justify-center items-center justify-evenly">
+  <div class="flex justify-center items-center justify-evenly md:mb-5">
       <ion-icon name="logo-facebook" size="large" onclick="location.href='https://www.facebook.com/fb.htetkoko'"></ion-icon>
       <ion-icon name="logo-github" size="large" onclick="location.href='https://github.com/htetkokoblog'"></ion-icon>
       <ion-icon name="navigate-circle" size="large" onclick="location.href='https://t.me/htetkokotelegram'"></ion-icon>
@@ -56,7 +55,7 @@
   <div class="text-gray-700 text-xl text-start font-bold mb-4">
     Personal - Blog
   </div>
-   <div ng-repeat="item in data">
+ <div ng-repeat="item in data">
 <div class="w-full bg-white rounded-lg shadow-lg overflow-hidden mb-8" ng-attr-id="{{ item.id }}">
   <div class="flex items-center px-6 py-4">
     <img class="w-12 h-12 rounded-full object-cover" src="images/profile.png" alt="Avatar">
@@ -91,4 +90,4 @@
   <p class="text-gray-400 text-sm ps-4" style="font-family: Nunito;">Personal Profile, Personal - Blog and About Me.......</p>
 </div>
 </body>
-</html>
+  </html>
