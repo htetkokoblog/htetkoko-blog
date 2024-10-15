@@ -2,8 +2,13 @@
 const blog = angular.module('blog', []);
 blog.controller('myblog', function($scope, $http, $location, $sce) {
     $scope.renderHtml = function(text) {
-        return $sce.trustAsHtml(text.replace(/\n/g, '<br>'));
-    };
+    // newline ကို <br> သို့ပြောင်းပါ
+    text = text.replace(/\n/g, '<br>');
+    // URL ကို <a> tag အဖြစ် ပြောင်းပါ
+    text = text.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" style="color: blue;" target="_blank">$1</a>');
+    return $sce.trustAsHtml(text);
+};
+
     $scope.$on('$locationChangeSuccess', function() {
          const hash = $location.hash();
          const element = document.getElementById(hash);
