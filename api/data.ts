@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) { 
     // CORS headers
-    res.setHeader('Access-Control-Allow-Origin', 'https://htetkokoblog.vercel.app');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
@@ -19,7 +19,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // GitHub API details
-    const token = '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'; // Use environment variable for security
+    const token = process.env.GITHUB_TOKEN; // Use environment variable for security
     const repo = 'htetkokoblog/My-App';
     const path = 'api/postdata.json'; 
     const url = `https://api.github.com/repos/${repo}/contents/${path}`;
