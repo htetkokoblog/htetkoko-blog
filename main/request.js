@@ -12,10 +12,7 @@ blog.controller('myblog', function($scope, $http, $location, $sce) {
     $scope.$on('$locationChangeSuccess', function() {
          const hash = $location.hash();
          const element = document.getElementById(hash);
-    
-         if (element) {
-              element.scrollIntoView();
-         }
+         element.scrollIntoView();
     });
 
     function getJsonFile() {
