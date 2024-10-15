@@ -5,7 +5,7 @@ blog.controller('myblog', function($scope, $http, $location, $sce) {
     // newline ကို <br> သို့ပြောင်းပါ
     text = text.replace(/\n/g, '<br>');
     // URL ကို <a> tag အဖြစ် ပြောင်းပါ
-    text = text.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" style="color: blue;" target="_blank">$1</a>');
+    text = text.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" class="underline text-blue-500" target="_blank">$1</a>');
     return $sce.trustAsHtml(text);
 };
 
