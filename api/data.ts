@@ -12,11 +12,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(200).end();
     }
 
-    // Check for allowed origin
-    const origin = req.headers.origin;
-    if (origin !== 'https://htetkokoblog.vercel.app') {
-        return res.status(403).json({ error: 'Access denied: Unauthorized origin' });
-    }
 
     // GitHub API details
     const token = process.env.GITHUB_TOKEN; // Use environment variable for security
