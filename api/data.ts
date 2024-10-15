@@ -19,7 +19,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // GitHub API details
-    const token = process.env.GITHUB_TOKEN; // Use environment variable for security
+    const token = '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'; // Use environment variable for security
     const repo = 'htetkokoblog/My-App';
     const path = 'api/postdata.json'; 
     const url = `https://api.github.com/repos/${repo}/contents/${path}`;
