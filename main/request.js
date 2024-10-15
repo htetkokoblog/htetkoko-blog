@@ -14,7 +14,7 @@ blog.controller('myblog', function($scope, $http, $location, $sce) {
     });
 
     function getJsonFile() {
-        $http.get('main/postdata.json')
+        $http.get('https://htetkoko.vercel.app/api/blog')
             .then(function(response) {
                 $scope.data = response.data;
                 $scope.data.reverse(); // Reverse the array if needed
