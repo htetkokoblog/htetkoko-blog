@@ -17,6 +17,7 @@ blog.controller('myblog', function($scope, $http, $location, $sce) {
         $http.get('https://htetkokoblog.vercel.app/api/data')
             .then(function(response) {
                 $scope.data = response.data;
+                alert(data);
                 $scope.data.reverse(); // Reverse the array if needed
             }, function(error) {
                 console.error('Error fetching data:', error);
