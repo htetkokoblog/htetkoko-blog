@@ -3,19 +3,13 @@ import axios from 'axios';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) { 
     // CORS headers
-    res.setHeader('Access-Control-Allow-Origin', 'https://htetkokoblog.vercel.app');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
     // Handle preflight request
     if (req.method === 'OPTIONS') {
         return res.status(200).end();
-    }
-
-    // Check for allowed origin
-    const origin = req.headers.origin;
-    if (origin !== 'https://htetkokoblog.vercel.app') {
-        return res.status(403).json({ error: 'Access denied: Unauthorized origin' });
     }
 
     // GitHub API details
