@@ -25,6 +25,6 @@ blog.controller('myblog', function($scope, $http, $location, $sce) {
             }, function(error) {
                 console.error('Error fetching data:', error);
             });
-        getJsonFile()
     }
+    getJsonFile()
 });
