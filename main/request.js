@@ -1,7 +1,6 @@
 //Request Get Data
 const blog = angular.module('blog', []);
 blog.controller('myblog', function($scope, $http, $location, $sce) {
-    getJsonFile();
     $scope.renderHtml = function(text) {
     // newline ကို <br> သို့ပြောင်းပါ
     text = text.replace(/\n/g, '<br>');
@@ -26,5 +25,6 @@ blog.controller('myblog', function($scope, $http, $location, $sce) {
             }, function(error) {
                 console.error('Error fetching data:', error);
             });
+        getJsonFile()
     }
 });
